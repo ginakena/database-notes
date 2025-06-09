@@ -78,11 +78,56 @@ The column EMP_PHONE, contains multiple phone numbers for the employees. This ta
 
 
 ## Second Normal Form: 
-*Each non-key attribute must depend on the entire primary key. <br>
-*Be in 1NF <br>
-*Single Column Primary Key that is not functionally dependent on any subset of candidate key relation
+* Each non-key attribute must depend on the entire primary key. <br>
+* Be in 1NF <br>
+* Single Column Primary Key that is not functionally dependent on any subset of candidate key relation
 
 Consider the following table: 
+
+|TEACHER_ID | SUBJECT | TEACHER_AGE|
+|------- |----------|------------|
+| 25     | Chemistry| 30 |
+|25      | Biology  | 30|
+| 47     | English    | 35 | 
+|83      | MATH     |38| 
+|83     | Computer      | 38| 
+
+In the given table, non-prime attribute TEACHER_AGE is dependent on TEACHER_ID which is a proper subset of a candidate key. That's why it violates the rule for 2NF.
+
+To convert the given table into 2NF, we decompose it into two tables:
+
+Teacher_Detail Table:
+| TEACHER_ID | TEACHER_AGE |
+|------------|--------------|
+|25          | 30           |
+|47          | 35           |
+|83          | 38           |
+
+TEACHER_SUBJECT TABLE: 
+| TEACHER_ID | SUBJECT |
+|------------|--------------|
+|25          | Chemistry    |
+|25          | Biology      |
+|47          | English      |
+|83          |MATH          |
+|83          | Computer     |  
+
+# Disadvantages of Normalization in DBMS
+While normalization DBMS offers numerous advantages, it also has some drawbacks.
+
+## 1. Requires Complete Understanding of User Needs
+Database normalization in DBMS requires a complete understanding of user needs before building the database. This means that careful analysis and planning are necessary to determine the appropriate level of normalization. Failing to understand user requirements can lead to a poorly designed database that is difficult to maintain and update.
+
+## 2. Performance Degradation in Higher Normal Forms
+As the level of normalization increases, i.e., moving towards higher normal forms such as 4NF and 5NF, the performance of the database can degrade. This is because more complex join operations are required to retrieve data from multiple tables, resulting in slower query execution.
+
+## 3.Time-Consuming Process
+Normalizing relations to higher degrees can be a time-consuming process. It involves analyzing data dependencies, identifying anomalies, and restructuring the database accordingly. This can be a complex task, especially for large databases with numerous tables and relationships.
+
+## 4.Careless Decomposition can Lead to Problems
+If the decomposition process is not carefully executed, it can lead to a poorly designed database. Careless decomposition can result in unnecessary joins, data redundancy, and increased complexity. This can cause serious problems in terms of data management and query performance.
+
+
 
 
 
