@@ -11,5 +11,14 @@ Normalization plays a crucial role in database design. Here are several reasons 
 * Minimizes update anomalies: With normalized tables, you can easily update data without affecting other records.
 * Enhances data integrity: It ensures that data remains consistent and accurate.
 
-## Types of Normalization in DBMS: 
+## Types of Normalization in DBMS:  
+
+![alt text](./norm.PNG)
+
+ 1. ** First Normal Form (1NF):
+ Ensures that the database table is organized such that each column contains atomic (indivisible) values, and each record is unique. This eliminates repeating groups, thereby structuring data into tables and columns.
+
+ 2. ** Second Normal Form (2NF):
+ 
+
 
