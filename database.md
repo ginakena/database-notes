@@ -53,13 +53,27 @@ Normalization plays a crucial role in database design. Here are several reasons 
 # Examples of Normalization:
 
 ## First Normal Form: <br>
-*Each table cell should contain a single value. <br>
-*Each record needs to be unique.
+* Each table cell should contain a single value. <br>
+* Each record needs to be unique.
 
-Consider the following table: 
+Consider the following table:
+
+| EMP_ID | EMP_NAME | EMP_PHONE |           EMP_STATE
+|------- |----------|------------|---------------------|
+| 14     | John     | 7272826385,9064738238|NAIROBI |
+| 20     | Harry    | 8574783832      |     KITALE  | 
+|12      | Sam      | 7390372389,858930302| ELDORET |   
 
 
 The column EMP_PHONE, contains multiple phone numbers for the employees. This table is not in 1NF. To normalize it, we have to decompose the column to give the table below: <br>
+
+| EMP_ID | EMP_NAME | EMP_PHONE |           EMP_STATE
+|------- |----------|------------|---------------------|
+| 14     | John     | 7272826385|NAIROBI |
+|14      | John     |9064738238 | NAIROBI|
+| 20     | Harry    | 8574783832| KITALE | 
+|12      | Sam      |7390372389|  ELDORET| 
+|12      | Sam      | 858930302| ELDORET | 
 
 
 
