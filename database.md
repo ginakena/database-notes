@@ -1,6 +1,6 @@
 # ACID Properties in DBMS
 
-![alt text](./acid.PNG)
+![alt text](./acid.PNG) <br>
 ACID stands for Atomicity, Consistency, Isolation, and Durability. These four key properties define how a transaction should be processed in a reliable and predictable manner, ensuring that the database remains consistent, even in cases of failures or concurrent accesses.
 
 ## 1. Atomicity.
@@ -52,9 +52,16 @@ Normalization plays a crucial role in database design. Here are several reasons 
 
 ## Examples of Normalization:
 
-**First Normal Form: 
-*Each table cell should contain a single value.
-*Each record needs to be unique. 
+**First Normal Form: <br>
+*Each table cell should contain a single value. <br>
+*Each record needs to be unique.
+
+Consider the following table: 
+![alt text](./table1.PNG)
+
+The column EMP_PHONE, contains multiple phone numbers for the employees. This table is not in 1NF. To normalize it, we have to decompose the column to give the table below: <br>
+
+![alt text](./table2.PNG)
 
 
 
