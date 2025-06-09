@@ -57,15 +57,15 @@ Normalization plays a crucial role in database design. Here are several reasons 
 *Each record needs to be unique.
 
 Consider the following table: 
-![alt text](./table1.PNG)
+
 
 The column EMP_PHONE, contains multiple phone numbers for the employees. This table is not in 1NF. To normalize it, we have to decompose the column to give the table below: <br>
 
-![alt text](./table2.PNG)
+
 
 ## Second Normal Form: 
-*Each non-key attribute must depend on the entire primary key.
-*Be in 1NF
+*Each non-key attribute must depend on the entire primary key. <br>
+*Be in 1NF <br>
 *Single Column Primary Key that is not functionally dependent on any subset of candidate key relation
 
 Consider the following table: 
