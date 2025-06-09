@@ -15,10 +15,22 @@ Normalization plays a crucial role in database design. Here are several reasons 
 
 ![alt text](./norm.PNG)
 
- 1. ** First Normal Form (1NF):
+ ** 1.  First Normal Form (1NF):
  Ensures that the database table is organized such that each column contains atomic (indivisible) values, and each record is unique. This eliminates repeating groups, thereby structuring data into tables and columns.
 
- 2. ** Second Normal Form (2NF):
+ ** 2.  Second Normal Form (2NF):
+ It requires all non-key attributes to be fully functional on the primary key.What this means, is that there should be a direct relationship between each column and the primary key, and not between other columns.
+
+ ** 3. Third normal Form (3NF): 
+  Extends 2NF by ensuring that all non-key attributes are not only fully functional on the primary key but also independent of each other. This eliminates transitive dependency.
  
+ ** 4. Boyce-Codd Normal Form (BCNF): 
+ A refinement of 3NF that addresses anomalies not handled by 3NF. It requires every determinant to be a candidate key, ensuring even stricter adherence to normalization rules.
+
+ ** 5. Fourth Normal Form (4NF): 
+ Addresses multi-valued dependencies. It ensures that there are no multiple independent multi-valued facts about an entity in a record.
+
+ ** 6. Fifth Normal Form (5NF):
+ 5NF is the highest normalization level that addresses join dependencies. It is used in specific scenarios to further minimize redundancy by breaking a table into smaller tables.
 
 
