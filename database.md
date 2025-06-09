@@ -50,9 +50,9 @@ Normalization plays a crucial role in database design. Here are several reasons 
   6. Fifth Normal Form (5NF): <br>
  5NF is the highest normalization level that addresses join dependencies. It is used in specific scenarios to further minimize redundancy by breaking a table into smaller tables.
 
-## Examples of Normalization:
+# Examples of Normalization:
 
-**First Normal Form: <br>
+## First Normal Form: <br>
 *Each table cell should contain a single value. <br>
 *Each record needs to be unique.
 
@@ -62,6 +62,15 @@ Consider the following table:
 The column EMP_PHONE, contains multiple phone numbers for the employees. This table is not in 1NF. To normalize it, we have to decompose the column to give the table below: <br>
 
 ![alt text](./table2.PNG)
+
+## Second Normal Form: 
+*Each non-key attribute must depend on the entire primary key.
+*Be in 1NF
+*Single Column Primary Key that is not functionally dependent on any subset of candidate key relation
+
+Consider the following table: 
+
+
 
 
 
